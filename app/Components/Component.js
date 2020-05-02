@@ -22,9 +22,11 @@ define('app/Components/Component.js', function () {
          * Рендер компонента
          * @returns {string}
          */
-        render() {}
+        render() {
+        }
 
-        afterRender () {}
+        afterRender() {
+        }
     }
 
 });

@@ -10,7 +10,7 @@ define('app/Helpers/UsefulFunction.js', function () {
          * @param ms
          * @returns {Promise<unknown>}
          */
-        sleep: function(ms) {
+        sleep: function (ms) {
             return new Promise(resolve => setTimeout(resolve, ms));
         },
 
@@ -19,7 +19,7 @@ define('app/Helpers/UsefulFunction.js', function () {
          * @param max
          * @returns {number}
          */
-        random: function(max) {
+        random: function (max) {
             return Math.floor(Math.random() * Math.floor(max));
         },
 
@@ -31,7 +31,7 @@ define('app/Helpers/UsefulFunction.js', function () {
          * @param body - тело элемента
          * @returns {any}
          */
-        insertElement: function(atr, to, className, body) {
+        insertElement: function (atr, to, className, body) {
             let elem = document.createElement(atr);
             elem.className = className;
             elem.innerHTML = body;

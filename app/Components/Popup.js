@@ -109,7 +109,7 @@ define('app/Components/Popup.js', [
             let radio = document.querySelectorAll(".popup__radio");
             let speed;
             radio.forEach((elem) => {
-                if(elem.checked) speed = parseInt(elem.dataset.speed);
+                if (elem.checked) speed = parseInt(elem.dataset.speed);
             });
             Handler.startBubble(speed);
         }
@@ -120,7 +120,7 @@ define('app/Components/Popup.js', [
         random() {
             let inputCount = parseInt(document.querySelector('.popup__input_count').value);
             let inputMax = parseInt(document.querySelector('.popup__input_max').value);
-            if((inputCount>1) && !isNaN(inputMax)) Handler.randomNumbers(inputCount, inputMax);
+            if ((inputCount > 1) && !isNaN(inputMax)) Handler.randomNumbers(inputCount, inputMax);
         }
 
         /**

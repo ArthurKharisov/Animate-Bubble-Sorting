@@ -48,7 +48,7 @@ define('app/Components/Controls.js', [
          */
         async destroyAndInsert(type, obj, className) {
             let elem = document.querySelector(".popup");
-            if(elem !== null) {
+            if (elem !== null) {
                 elem.classList.add('destroy');
                 await Func.sleep(300);
                 elem.remove();
@@ -67,7 +67,7 @@ define('app/Components/Controls.js', [
          * Обработчик кнопки старта сортировки
          */
         startSorting() {
-            if(this.current==0) {
+            if (this.current == 0) {
                 let type = "start";
                 let className = "popup small";
                 let obj = new Popup(type);
@@ -80,12 +80,12 @@ define('app/Components/Controls.js', [
          * Обработчик кнопки добавить число
          */
         addNumber() {
-            if(this.current==0) {
+            if (this.current == 0) {
                 let type = "add";
                 let className = "popup small";
                 let obj = new Popup(type);
                 this.current = 1;
-                this.destroyAndInsert(type,obj, className);
+                this.destroyAndInsert(type, obj, className);
             }
         }
 
@@ -93,12 +93,12 @@ define('app/Components/Controls.js', [
          * Обработчик кнопки добавить рандомные числа
          */
         randomNumber() {
-            if(this.current==0) {
+            if (this.current == 0) {
                 let type = "random";
                 let className = "popup small2";
                 let obj = new Popup(type);
                 this.current = 1;
-                this.destroyAndInsert(type,obj, className);
+                this.destroyAndInsert(type, obj, className);
             }
         }
 

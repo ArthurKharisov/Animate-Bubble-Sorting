@@ -51,7 +51,7 @@ define('app/Controllers/MainHandler.js', [
                     `<span class="number__text">${number}</span>`
                 ));
                 this.minmax = res.resizeNumber(number, this.minmax, this.numbersUI);
-                this.scroll(this.numbersUI[this.numbersUI.length-1]);
+                this.scroll(this.numbersUI[this.numbersUI.length - 1]);
             }
         }
 
@@ -60,7 +60,7 @@ define('app/Controllers/MainHandler.js', [
          */
         deleteNumbers() {
             this.numbersUI.forEach((item) => {
-               this.destroy(item);
+                this.destroy(item);
             });
             this.numbersUI = [];
             this.minmax = {

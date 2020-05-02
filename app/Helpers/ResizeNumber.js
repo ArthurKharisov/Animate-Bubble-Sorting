@@ -20,20 +20,22 @@ define('app/Helpers/ResizeNumber.js', function () {
                     resize(num, step);
                 });
             }
+
             function resize(num, elem) {
-                let step = (Math.abs(minmax.min)+num)/(minmax.max+Math.abs(minmax.min))*160+10;
+                let step = (Math.abs(minmax.min) + num) / (minmax.max + Math.abs(minmax.min)) * 160 + 10;
                 elem.style.padding = `${step}px`;
             }
+
             number = parseInt(number);
-            if(number<minmax.min) {
+            if (number < minmax.min) {
                 minmax.min = number;
                 resizeAll();
             }
-            if(number>minmax.max) {
+            if (number > minmax.max) {
                 minmax.max = number;
                 resizeAll();
             } else {
-                resize(number, arrayNumberUI[arrayNumberUI.length-1]);
+                resize(number, arrayNumberUI[arrayNumberUI.length - 1]);
             }
             return minmax;
         }
